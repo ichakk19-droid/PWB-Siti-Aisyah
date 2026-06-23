@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        body {
+            background-color: lightblue;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .item {
+            background-color: navy;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        @media only screen and (max-width: 600px) {
+
+            body {
+                background-color: red;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive CSS</h1>
+
+    <div class="grid">
+
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+
+    </div>
+</body>
+</html>
