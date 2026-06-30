@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Ini Adalah Latihan Event Handling</title>
+
+    <style>
+        #inputNama {
+            border: 2px solid #ccc;
+            padding: 8px;
+            transition: 0.3s;
+        }
+
+        #inputNama:focus {
+            border-color: dodgerblue;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h3>Ini Adalah Gambar Galaxy</h3>
+
+    <img id="gambar" src="https://i.pinimg.com/736x/82/93/b4/8293b4a13e14b0056d7e9810a0a9c7aa.jpg" alt="gambar" onmouseover="gantiGambar()" onmouseout="kembalikanGambar()">
+
+    <hr>
+
+    <h3>Masukkan Data</h3>
+
+    <label>Ketik Nama Anda :</label>
+
+    <input type="text" id="inputNama" onchange="tampilkanOutput()">
+
+    <p>Output :
+        <span id="hasil"></span>
+    </p>
+
+    <script>
+
+        function gantiGambar() {
+
+            document.getElementById("gambar").src = "https://i.pinimg.com/736x/b7/15/98/b715984a3c94f3c9ed7da403aaf9a3bc.jpg";
+
+        }
+
+        function kembalikanGambar() {
+
+            document.getElementById("gambar").src = "https://i.pinimg.com/736x/82/93/b4/8293b4a13e14b0056d7e9810a0a9c7aa.jpg";
+
+        }
+
+        function tampilkanOutput() {
+
+            var nilai = document.getElementById("inputNama").value;
+
+            document.getElementById("hasil").innerHTML = "<b>" + nilai + "</b>";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

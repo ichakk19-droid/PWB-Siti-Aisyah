@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image Slideshow</title>
+</head>
+
+<body>
+
+    <h2>Toothless</h2>
+
+    <img id="slideshow-image" src="" alt="Slideshow" width="500">
+
+    <br><br>
+
+    <button onclick="gantiGambar(-1)">Previous</button>
+    <button onclick="gantiGambar(1)">Next</button>
+
+    <script>
+
+        var gambar = [
+
+            "https://i.pinimg.com/736x/0e/71/3b/0e713bacfaabf363260f91a0e64eeda6.jpg",
+
+            "https://i.pinimg.com/736x/67/46/2d/67462df03f39a622be41ce52c2fbc96c.jpg",
+
+            "https://i.pinimg.com/736x/93/a9/d4/93a9d48779c586a590645161da071aa7.jpg",
+
+            "https://i.pinimg.com/736x/26/e0/95/26e0951e76fa233b616063d9a67a3a76.jpg",
+
+            "https://i.pinimg.com/736x/4e/19/be/4e19beafba6350dd9d6ebfc727cc84cd.jpg"
+
+        ];
+
+        var indexGambar = 0;
+
+        var imageElement = document.getElementById("slideshow-image");
+
+        function tampilkanGambar() {
+
+            imageElement.src = gambar[indexGambar];
+
+        }
+
+        function gantiGambar(arah) {
+
+            indexGambar += arah;
+
+            if (indexGambar >= gambar.length) {
+                indexGambar = 0;
+            }
+
+            if (indexGambar < 0) {
+                indexGambar = gambar.length - 1;
+            }
+
+            tampilkanGambar();
+        }
+
+        tampilkanGambar();
+
+    </script>
+
+</body>
+
+</html>
